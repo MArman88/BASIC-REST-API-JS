@@ -9,7 +9,7 @@ const endpoint = (path, param) => {
         let paramEncoded;
         for (key in param) {
             let value = param[key];
-            if (value && value.length > 0) {
+            if (value) {
                 if (paramEncoded) {
                     paramEncoded += `&${key}=${value}`;
                 } else {

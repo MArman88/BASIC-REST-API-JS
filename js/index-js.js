@@ -27,10 +27,8 @@ function fetchUsers() {
 }
 
 function selectAUser(user) {
+    removeAllChildren(postSection);
     if (userSelected) {
-
-        removeAllChildren(postSection);
-
         postSection.classList.toggle('postSection');
         if (postSelected) {
             postSelected = undefined;
@@ -76,10 +74,8 @@ function fetchPosts(user) {
 }
 
 function selectAPost(post) {
+    removeAllChildren(commentsSection);
     if (postSelected) {
-
-        removeAllChildren(commentsSection);
-
         commentsSection.classList.toggle('commentSection');
         postSelected = post;
         fetchComments(post.id);
